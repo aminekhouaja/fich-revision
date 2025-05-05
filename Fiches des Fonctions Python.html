@@ -271,7 +271,7 @@ Fonction conv10(x, b)
 Début
     s ← 0
     Pour i de 0 à longueur(x) - 1 faire
-        Si x[i].estnum alors
+        Si x[i].estnum() alors
             s ← s * b + entier(x[i])
         Sinon
             s ← s * b + (ord(x[i]) - 55)
@@ -293,7 +293,7 @@ Début
   Si x = "" alors
     Retourner 0
   Sinon
-    Si x[l] est un chiffre alors
+    Si x[l].estnum() alors
       Retourner b * conv2(sous_chaine(x, 0, l), b)+entier(x[l])
     Sinon
       Retourner b * conv2(sous_chaine(x, 0, l), b)+(ord(x[l]) - 55)
