@@ -598,13 +598,11 @@ def point_fixe(epsilon):
 Procédure point_fixe(epsilon)
 Début
   xa ← f(0)
-  i ← 1
   répéter
     xp ← xa
     xa ← f(xp)
-    i ← i + 1
   jusqu’à (abs(xa - xp) ≤ epsilon)
-  écrire("La valeur approchée du point fixe est :", xa, "trouvée après", i, "itérations")
+  retourner xa
 Fin
     </pre
         >
