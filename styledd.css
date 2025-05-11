@@ -53,6 +53,16 @@ body {
   max-width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+#TableWidget .modal-content {
+  background-color: #2cde85;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
 .close {
   color: #aaa;
   float: right;
@@ -68,6 +78,14 @@ body {
   font-family: monospace;
   white-space: pre-wrap;
   border-radius: 5px;
+}
+#TableWidget .algo {
+  background-color: #00414a;
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  border-radius: 5px;
+  color: white;
 }
 #meth_alg {
   display: flex;
@@ -235,4 +253,3 @@ table tr:hover {
 #QtCard h3 {
   color: black;
 }
-
