@@ -215,3 +215,24 @@ table tr:nth-child(even) {
 table tr:hover {
   background-color: #3a3a3a;
 }
+#QtCard {
+  width: 350px;
+  border: 1px solid #00414a;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-color: #2cde85;
+  background-image: url(qtlogo.png);
+  background-size: 15%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+#QtCard .code {
+  background: #00414a;
+  color: white;
+}
+#QtCard h3 {
+  color: black;
+}
+
