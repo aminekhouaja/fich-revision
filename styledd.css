@@ -1,0 +1,213 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+}
+.card {
+  width: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+.card h3 {
+  margin-top: 0;
+  color: #2575fc;
+}
+.code {
+  background: #282c34;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  white-space: pre;
+  color: #50fa7b;
+  overflow-x: auto;
+  display: block;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+  background-color: white;
+  color: black;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+.close:hover {
+  color: black;
+}
+.algo {
+  background-color: #f0f0f0;
+  padding: 10px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  border-radius: 5px;
+}
+#meth_alg {
+  display: flex;
+  justify-content: space-between;
+  font-size: larger;
+}
+#meth_alg select,
+#meth_alg button {
+  background-color: #649dff;
+  color: white;
+  border-radius: 12px;
+  border: none;
+  padding: 5px;
+}
+/* Add this to the <style> section */
+header {
+  width: 100%;
+  text-align: center;
+  background-color: #2575fc;
+  color: white;
+  padding: 20px 50px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  display: flex;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+header p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  color: #649dff;
+}
+
+/* Ajouter ce style dans la section <style> */
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #649dff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+#algoXX {
+  color: red;
+}
+#progX {
+  color: red;
+}
+#nomf {
+  color: #649dff;
+}
+#nomg {
+  color: #649dff;
+}
+
+@media screen and (orientation: portrait) {
+  #rotate-notice {
+    display: flex;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #rotate-notice {
+    display: none;
+  }
+}
+
+#rotate-notice {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 9999;
+  padding: 20px;
+  word-wrap: normal;
+}
+img {
+  width: 20%;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 10%;
+  height: 100%;
+}
+.table-container {
+  margin: 20px auto;
+  text-align: center;
+  color: white;
+}
+
+.table-container h2 {
+  margin-bottom: 10px;
+  color: #649dff;
+}
+
+table {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+table th,
+table td {
+  border: 1px solid #649dff;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2575fc;
+}
+
+table tr:nth-child(even) {
+  background-color: #2a2a2a;
+}
+
+table tr:hover {
+  background-color: #3a3a3a;
+}
