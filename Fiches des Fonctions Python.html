@@ -578,14 +578,12 @@ Fin</pre
       <div class="code">
         <pre>
 def point_fixe(epsilon):
-    i = 0
     xp = f(0)
     xa = f(xp)
     while not(abs(xa - xp) <= epsilon):
-        i = i + 1
         xp = xa
         xa = f(xp)
-    print("La valeur approchée du point fixe est :", xa, "trouvée après", i, "itérations")
+    return xa
     </pre
         >
       </div>
