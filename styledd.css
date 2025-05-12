@@ -253,3 +253,35 @@ table tr:hover {
 #QtCard h3 {
   color: black;
 }
+#conseil {
+  background-color: rgba(255, 255, 255, 0.546);
+  color: black;
+  height: 10%;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  animation: clignotan infinite 2s ease-in-out;
+}
+@keyframes clignotan {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#conseil .close {
+  color: #649dff;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+#conseil .close:hover {
+  color: black;
+}
