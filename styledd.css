@@ -263,14 +263,14 @@ table tr:hover {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  animation: clignotan infinite 2s ease-in-out;
+  animation: clignotan infinite 1s ease-in-out;
 }
 @keyframes clignotan {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   100% {
     opacity: 1;
