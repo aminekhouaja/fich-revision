@@ -270,7 +270,9 @@ table tr:hover {
     opacity: 1;
   }
   50% {
-    opacity: 0.6;
+    opacity: 0.8;
+    background-color: rgb(253, 135, 135);
+    scale: 1.01;
   }
   100% {
     opacity: 1;
