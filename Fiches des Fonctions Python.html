@@ -532,6 +532,138 @@ Fin</pre
         >
       </div>
     </div>
+    <!-- -------------------------------------------- -->
+
+    <div class="card" ondblclick="openModal('trans_fich_tab')">
+      <h3 class="titre">Transfert de fichier texte à tableau</h3>
+      <p>Transferer le contenu d'un fichier texte vers un tableau</p>
+      <div class="code">
+        <!-- -----fonction---- -->
+        <pre>
+def transfert():
+    f=open('cache.txt','r')
+    ch=f.readline()[:-1]
+    n=0
+    t=array([str]*10)
+    while ch!="":
+        t[n]=ch
+        ch=f.readline()[:-1]
+        n+=1
+    f.close()
+</pre
+        >
+      </div>
+    </div>
+
+    <div id="trans_fich_tab" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('trans_fich_tab')"
+          >&times;</span
+        >
+        <h4>Version algorithmique (Transfert)</h4>
+        <pre class="algo">
+    <!-- ----algorithme------- -->
+Fonction Transfert(@F;texte,T:tab,@n:entier)
+Début
+    Ouvrir("cache.txt",F, "r")
+    N ← 0
+    TantQue non FinFichier(F)  Faire
+        LireLigne(F, CH)
+        T[N] ← CH
+        N ← N + 1
+    FinTantQue
+    Fermer(F)
+Fin
+
+          </pre>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <div class="card" ondblclick="openModal('tran_fT_tab')">
+      <h3 class="titre">Transfert de fichier typé à tableau</h3>
+      <p>Transferer le contenu d'un fichier typé vers un tableau</p>
+      <div class="code">
+        <pre>
+    <!-- -----fonction---- -->
+def transfert():
+    f=open('cache.dat','r')
+    fin=True
+    t=array([dict(e)]*10)
+    while fin:
+      try:
+          e=load(f)
+          t[n]=e
+          n+=1
+      except:
+          fin=False
+    f.close()</pre>
+      </div>
+    </div>
+
+    <div id="tran_fT_tab" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('tran_fT_tab')">&times;</span>
+        <h4>Version algorithmique (Air trapéze)</h4>
+        <pre class="algo">
+    <!-- ----algorithme------- -->
+Fonction Transfert(T:tab,@F:fich,@n:entier)
+Début
+    Ouvrir("cache.dat",F,"rb")
+    N ← 0
+    TantQue non FinFichier(F) Faire
+        Lire(F, T[N])
+        N ← N + 1
+    FinTantQue
+    Fermer(F)
+Fin</pre>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <div class="card" ondblclick="openModal('trans_tab_f')">
+      <h3 class="titre">Transfert de tableau à fichier</h3>
+      <p>Transferer le contenu d'un tableau vers fichier</p>
+      <div class="code">
+        <pre>
+    <!-- -----fonction---- -->
+def Enregistrer(t,n):
+  f=open("cache.txt")
+  for i in range(n):
+      f.write(str(t[i]))
+  f.close()
+
+def Enregistrer2(t,n):
+  f=open("cache.dat")
+  for i in range(n):
+      dunp(t[i],f)
+  f.close()
+          
+
+</pre>
+      </div>
+    </div>
+
+    <div id="trans_tab_f" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('trans_tab_f')">&times;</span>
+        <h4>Version algorithmique (Air trapéze)</h4>
+        <pre class="algo">
+    <!-- ----algorithme------- -->
+Procédure Enregistrer(T : tab, N : entier, @F : fich)
+
+Début
+    Ouvrir("cache.txt", F, "wb")
+    Pour i de 0 à N - 1 Faire
+        Ecrire_nl(F, T[i])
+        #Ecrire(F,t[i]) ///pour les fichier type
+    FinPour
+    Fermer(F)
+Fin
+
+          </pre>
+      </div>
+    </div>
     <!-- TRI INSERTION -->
     <div class="card" ondblclick="openModal('algofun0')">
       <h3>point_zero(epsilon)</h3>
