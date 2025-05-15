@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="rotate-notice">
+      🔁 Veuillez tourner votre appareil en mode paysage pour une meilleure
+      expérience.
+    </div>
+    <header>
+      <div class="head">
+        <h1>Fich de révision STI</h1>
+        <p>made by : med amine khouaja</p>
+      </div>
+    </header>
+    <div id="conseil">
+      conseil: faite un double click sur les codes pour visualiser leurs
+      explications
+      <span class="close" onclick="closeModal('conseil')">&times;</span>
+    </div>
+    <!-- CARD conv10 -->
+    <div class="card" id="div1">
+      <h3>alpha(ch)</h3>
+      <div id="meth_alg">
+        <select id="methode" onchange="addNewCard()">
+          <option value="methode iteratif">methode iteratif</option>
+          <option value="methode recursive">methode recursive</option>
+        </select>
+        <!-- <button ondblclick="verif()">algorithme</button>-->
+      </div>
+
+      <p>
+        verifie si une chaine ch et composée que par des lettres et des espaces.
+      </p>
+      <div class="code" id="joe1" ondblclick="verif()">
+        <pre>
+function caractere(car) {
+  return !(car.toUpperCase() < "A" || car.toUpperCase() > "Z");
+}
+function alpha(ch) {
+  for (let i = 0; i < ch.length; i++) {
+    if (ch[i] != " " && !caractere(ch[i])) {
+      return false;
+    }
+  }
+  return true;
+}</pre
+        >
+      </div>
+    </div>
+
+    <div id="algo1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('algo1')">&times;</span>
+        <h4>Version algorithmique (conv10)</h4>
+        <pre class="algo">
+Fonction conv10(x, b)
+Début
+    s ← 0
+    Pour i de 0 à longueur(x) - 1 faire
+        Si x[i].estnum alors
+            s ← s * b + entier(x[i])
+        Sinon
+            s ← s * b + (ord(x[i]) - 55)
+        FinSi
+    FinPour
+    Retourner s
+Fin</pre
+        >
+      </div>
+    </div>
+
+    <!-- CARD conv -->
+    <div class="card" ondblclick="openModal('algo2')">
+      <h3>numerique(n, b)</h3>
+      <p></p>
+      <div class="code">
+        <pre>
+function alpha(ch) {
+  for (let i = 0; i < ch.length; i++) {
+    if (ch[i]<"0"||ch[i]>"9") {
+      return false;
+    }
+  }
+  return true;</pre
+        >
+      </div>
+    </div>
+    <div id="algo2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('algo2')">&times;</span>
+        <h4>Version algorithmique (conv)</h4>
+        <pre class="algo">
+Fonction conv(n, b)
+Début
+    Si n = 0 alors
+        Retourner ""
+    Sinon
+        r ← n mod b
+        Si r ≥ 10 alors
+            Retourner conv(n div b, b) + chr(r + 55)
+        Sinon
+            Retourner conv(n div b, b) + str(r)
+        FinSi
+    FinSi
+Fin</pre
+        >
+      </div>
+    </div>
+
+    <script src="mesScript.js"></script>
+    <!-- Ajouter un footer -->
+    <footer>
+      <p>
+        Contactez-moi :
+        <a href="https://www.instagram.com/khouaja_amine/" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        | Téléphone : +216
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <mrow>
+            <mrow>
+              <mn>5</mn>
+              <mo>*</mo>
+              <mn>3</mn>
+              <mo>!</mo>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mi>ln</mi>
+              <mo>(</mo>
+              <mi>e</mi>
+              <msup>
+                <mn>9</mn>
+              </msup>
+              <mo>)</mo>
+              <mo>*</mo>
+              <msup>
+                <mn>10</mn>
+                <mn>5</mn>
+              </msup>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mn>400</mn>
+              <mo>*</mo>
+              <mn>940</mn>
+            </mrow>
+            <mo>+</mo>
+            <mrow>
+              <mn>4</mn>
+              <mo>*</mo>
+              <mn>13</mn>
+              <mo>*</mo>
+              <mn>5</mn>
+            </mrow>
+          </mrow>
+        </math>
+      </p>
+    </footer>
+  </body>
+</html>
