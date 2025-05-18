@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fiche de révision STI</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -32,7 +32,7 @@
       <p>
         verifie si une chaine ch et composée que par des lettres et des espaces.
       </p>
-      <div class="code" id="joe1" ondblclick="openModal('algo2')">
+      <div class="code" id="joe1" ondblclick="openModal('explications_non')">
         <pre>
 
 function alpha(ch) {
@@ -59,7 +59,7 @@ function caractere(car) {
     </div>
 
     <!-- CARD conv -->
-    <div class="card" ondblclick="openModal('algo2')">
+    <div class="card" ondblclick="openModal('explications_non')">
       <h3>numerique(n, b)</h3>
       <p>verifie si une chaine ch et composée que par des chiffres .</p>
       <div class="code">
@@ -76,7 +76,7 @@ function numerique(ch) {
     </div>
 
     <!-- CARD conv -->
-    <div class="card" ondblclick="openModal('algo2')">
+    <div class="card" ondblclick="openModal('explications_non')">
       <h3>alphanumerique(ch)</h3>
       <p>
         verifie si une chaine ch et composée par des chiffres et des caracteres
@@ -100,7 +100,7 @@ function caractere(ch) {
       </div>
     </div>
     <!-- CARD conv -->
-    <div class="card" ondblclick="openModal('algo2')">
+    <div class="card" ondblclick="openModal('explications_non')">
       <h3>if (condition : email)</h3>
       <p>
         La taille ne dépasse pas 50 caractères et ayant le format : ch1@ch2.ch3
@@ -123,7 +123,56 @@ if (
       </div>
     </div>
     <!-- CARD conv -->
-    <div class="card" ondblclick="openModal('algo2')">
+    <div class="card" ondblclick="openModal('explications_mdp')">
+      <h3>mot de passe(n, b)</h3>
+      <p>
+        verifie si la chaine contient au moins un chiffre , une lettre majuscule
+        et une minuscule
+      </p>
+      <div id="conseil" class="conseil">
+        conseil: faite un double click sur le code pour visualiser l'affichage
+        (encore en Beta)
+        <span class="close" onclick="closeModal('conseil')">&times;</span>
+      </div>
+      <div class="code">
+        <pre>
+function verifmdp(ch) {
+  test1 = false;
+  test2 = false;
+  test3 = false;
+  i = 0;
+  while ((!test1 || !test2 || !test3) && i < ch.length) {
+    if (!(ch[i] > "9" || "0" > ch[i])) {
+      test1 = true;
+    } else if (caractere(ch[i]) && ch[i].toLowerCase() == ch[i]) {
+      test2 = true;
+    } else if (caractere(ch[i]) && ch[i].toUpperCase() == ch[i]) {
+      test3 = true;
+    }
+    i++;
+  }
+  return test1 && test2 && test3;
+}
+function caractere(car) {
+  return !(car.toUpperCase() < "A" || car.toUpperCase() > "Z");
+}
+</pre
+        >
+      </div>
+    </div>
+    <div id="explications_mdp" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('explications_mdp')"
+          >&times;</span
+        >
+        <h4>explications</h4>
+        <pre
+          class="algo"
+        >"Ali"=<i class="nomff">false</i> ; "Al1"=<i class="nomf">true</i></pre>
+      </div>
+    </div>
+    <!-- CARD conv -->
+    <div class="card" ondblclick="openModal('explications_non')">
       <h3>options</h3>
       <p>remplir une select avec des options grace a Js exemple les jours</p>
       <div class="code">
@@ -136,35 +185,68 @@ for (i=1;i < 32 ; i++){
         </pre>
       </div>
     </div>
-    <div id="algo2" class="modal">
+    <div id="explications_non" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="closeModal('algo2')">&times;</span>
+        <span class="close" onclick="closeModal('explications_non')"
+          >&times;</span
+        >
         <h4>explications</h4>
         <pre class="algo">pas encore d'explications</pre>
       </div>
     </div>
     <!-- CARD conv -->
-    <div class="card" ondblclick="openModal('algo2')">
-      <h3>check</h3>
+    <div class="card" ondblclick="openModal('explications_non')">
+      <h3>check(radio/checkbox)</h3>
       <p>vérifier si au moins un bouton radio est coché parmi .</p>
       <div class="code">
         <pre>
-let q1 = document.getElementsByName("q1");
-let isChecked = false;
-
-for (let i = 0; i < q1.length; i++) {
-  if (q1[i].checked) {
-    isChecked = true;
-    break;
+function verif_check(){
+  let q1 = document.getElementsByName("q1");
+  for (let i = 0; i < q1.length; i++) {
+    if (q1[i].checked) {
+      return true
+    }
   }
+  return true
 }
-return isChecked
 </pre
         >
       </div>
     </div>
     <!-- CARD conv -->
-    <div value="php" class="card" ondblclick="openModal('algo2')">
+    <div class="card" ondblclick="openModal('distinct')">
+      <h3>distinct(ch)</h3>
+      <p>verifie si la chaine admet des caracteres distinct</p>
+      <div id="conseil" class="conseil">
+        conseil: faite un double click sur le code pour visualiser l'affichage
+        (encore en Beta)
+        <span class="close" onclick="closeModal('conseil')">&times;</span>
+      </div>
+      <div class="code">
+        <pre>
+function distinct(ch) {
+  i = 0;
+  while (ch.lastIndexOf(ch[i]) == i && i < ch.length) {
+    i++;
+  }
+  return i == ch.length;
+}
+
+</pre
+        >
+      </div>
+    </div>
+    <div id="distinct" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('distinct')">&times;</span>
+        <h4>explications</h4>
+        <pre
+          class="algo"
+        >"azza"=<i class="nomff">false</i> ; "amine"=<i class="nomf">true</i></pre>
+      </div>
+    </div>
+    <!-- CARD conv -->
+    <div value="php" class="card" ondblclick="openModal('explications_non')">
       <h3>connection et requete en php</h3>
       <p>
         se connecter a une base de donnes sur le serveur et executer une requete
@@ -178,7 +260,7 @@ $res=<i class="nomg">mysqli_query</i>($cx,"SELECT * from sondage where theme='$s
 </pre>
       </div>
     </div>
-    <div value="php" class="card" ondblclick="openModal('algo2')">
+    <div value="php" class="card" ondblclick="openModal('explications_non')">
       <h3>condition d'inscription verification d'authentification</h3>
       <p>
         se connecter a une base de donnes sur le serveur et executer une requete
@@ -215,7 +297,7 @@ else{
         se connecter a une base de donnes sur le serveur et executer une requete
         sur la BD .
       </p>
-      <div id="conseil">
+      <div id="conseil" class="conseil">
         conseil: faite un double click sur le code pour visualiser l'affichage
         (encore en Beta)
         <span class="close" onclick="closeModal('conseil')">&times;</span>

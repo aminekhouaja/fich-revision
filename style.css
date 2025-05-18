@@ -190,7 +190,7 @@ footer a:hover {
 .nomff {
   color: red;
 }
-#nomg {
+.nomg {
   color: #649dff;
 }
 
@@ -286,7 +286,7 @@ table tr:hover {
 #QtCard h3 {
   color: #232946;
 }
-#conseil {
+.conseil {
   background-color: rgba(241, 233, 255, 0.85);
   color: #232946;
   height: 5%;
@@ -313,14 +313,14 @@ table tr:hover {
     opacity: 1;
   }
 }
-#conseil .close {
+.conseil .close {
   color: #a18cd1;
   float: right;
   font-size: 28px;
   cursor: pointer;
 }
 
-#conseil .close:hover {
+.conseil .close:hover {
   color: #6247aa;
 }
 .card[value="php"] .code .nomf {

@@ -135,3 +135,23 @@ return s</pre
 
   // Contenu de la carte
 }
+function verifmdp(ch) {
+  test1 = false;
+  test2 = false;
+  test3 = false;
+  i = 0;
+  while ((!test1 || !test2 || !test3) && i < ch.length) {
+    if (!(ch[i] > "9" || "0" > ch[i])) {
+      test1 = true;
+    } else if (caractere(ch[i]) && ch[i].toLowerCase() == ch[i]) {
+      test2 = true;
+    } else if (caractere(ch[i]) && ch[i].toUpperCase() == ch[i]) {
+      test3 = true;
+    }
+    i++;
+  }
+  return test1 && test2 && test3;
+}
+function caractere(car) {
+  return !(car.toUpperCase() < "A" || car.toUpperCase() > "Z");
+}
