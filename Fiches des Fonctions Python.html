@@ -745,6 +745,35 @@ Fin
         >
       </div>
     </div>
+    <!-- verif_reel -->
+    <div class="card" ondblclick="openModal('verif_reel')">
+      <h3>verif_reel(ch)</h3>
+      <p>
+        verifie si la chaine ch est un reel {methode utilisée que en pratique}.
+      </p>
+      <div class="code">
+        <pre>
+def verif_reel(ch):
+    try:
+        x=float(ch)
+        return True
+    except:
+        return False</pre
+        >
+      </div>
+    </div>
+    <div id="verif_reel" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('verif_reel')">&times;</span>
+        <h4>Version algorithmique (verif reel)</h4>
+        <pre class="algo">
+fonction verif_reel(ch):
+    retourner ch.estNum Ou (souchaine(ch,0,pos(".",ch)).estNum and souchaine(ch,pos('.',ch)+1,long(ch)))
+          </pre
+        >
+      </div>
+    </div>
+
     <!-- -->
     <div id="TableWidget" class="modal">
       <div class="modal-content">
@@ -795,6 +824,7 @@ app.exec_()
         >
       </div>
     </div>
+
     <!-- Ajouter la table -->
     <div class="table-container">
       <p>
