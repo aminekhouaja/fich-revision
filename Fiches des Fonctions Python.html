@@ -642,13 +642,13 @@ Fin</pre>
         <pre>
     <!-- -----fonction---- -->
 def Enregistrer(t,n):
-  f=open("cache.txt")
+  f=open("cache.txt",'a')
   for i in range(n):
       f.write(str(t[i]))
   f.close()
 
 def Enregistrer2(t,n):
-  f=open("cache.dat")
+  f=open("cache.dat",'ab')
   for i in range(n):
       dump(t[i],f)
   f.close()
@@ -667,7 +667,7 @@ def Enregistrer2(t,n):
 Procédure Enregistrer(T : tab, N : entier, @F : fich)
 
 Début
-    Ouvrir("cache.txt", F, "wb")
+    Ouvrir("cache.txt", F, "wb/w")
     Pour i de 0 à N - 1 Faire
         Ecrire_nl(F, T[i])
         #Ecrire(F,t[i]) ///pour les fichier type
