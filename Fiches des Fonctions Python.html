@@ -595,9 +595,10 @@ Fin
         <pre>
     <!-- -----fonction---- -->
 def transfert():
-    f=open('cache.dat','r')
+    f=open('cache.dat','rb')
     fin=True
     t=array([dict(e)]*10)
+    n=0
     while fin:
       try:
           e=load(f)
