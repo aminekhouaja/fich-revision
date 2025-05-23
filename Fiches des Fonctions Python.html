@@ -346,8 +346,8 @@ def tri_selection(t, n):
                 min_index = j
         if min_index!=i :
           a = t[i]
-          t[i] = t[j]
-          t[j] = a</pre
+          t[i] = t[min_index]
+          t[min_index] = a</pre
         >
       </div>
     </div>
@@ -367,8 +367,8 @@ Début
         FinPour
         Si min_index!=i alors
           a ← t[i]
-          t[i] ← t[j]
-          t[j] ← a
+          t[i] ← t[min_index]
+          t[min_index] ← a
         FinSi
     FinPour
 Fin</pre
