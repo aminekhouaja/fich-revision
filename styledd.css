@@ -290,3 +290,11 @@ table tr:hover {
 #conseil .close:hover {
   color: black;
 }
+#tabw {
+  animation: clignotan1 infinite 1.4s ease;
+}
+@keyframes clignotan1 {
+  50% {
+    background-color: lightseagreen;
+  }
+}
