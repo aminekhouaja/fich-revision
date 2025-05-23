@@ -600,9 +600,10 @@ Fin
         <pre>
     <!-- -----fonction---- -->
 def transfert():
-    f=open('cache.dat','r')
+    f=open('cache.dat','rb')
     fin=True
     t=array([dict(e)]*10)
+    n=0
     while fin:
       try:
           e=load(f)
@@ -770,7 +771,6 @@ Fin
       <div class="code">
         <pre>
 def suite(n):
-    #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
     if n==0:
         return 3
     else:
@@ -799,7 +799,7 @@ Fin
     </div>
     <!-- Nouvelle carte pour aprox  suite -->
     <div class="card" ondblclick="openModal('approx_suite')">
-      <h3>parrox_suite(epsilon)</h3>
+      <h3>aprrox_suite(epsilon)</h3>
       <p>
         calculer une valeur rapproché a epsilon prés grace a une suite(Bac 23)
         <br />
