@@ -745,6 +745,86 @@ Fin
         >
       </div>
     </div>
+    <!-- Nouvelle carte pour suite -->
+    <div class="card" ondblclick="openModal('suite')">
+      <h3>suite(n)</h3>
+      <p>
+        calculer le N <sub>ieme</sub> terme de la suite
+        <br />
+        #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
+      </p>
+      <div class="code">
+        <pre>
+def suite(n):
+    #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
+    if n==0:
+        return 3
+    else:
+        return 0.5*suite(n-1)
+    </pre
+        >
+      </div>
+    </div>
+
+    <!-- Modal pour l'algorithme point_fixe -->
+    <div id="suite" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('suite')">&times;</span>
+        <h4>Version algorithmique (point_fixe)</h4>
+        <pre class="algo">
+fonction suite(n)
+Début
+    Si n==0 alors
+      retourner 3
+    Sinon
+      retourner 0.5*suite(n-1)
+Fin
+    </pre
+        >
+      </div>
+    </div>
+    <!-- Nouvelle carte pour aprox  suite -->
+    <div class="card" ondblclick="openModal('approx_suite')">
+      <h3>parrox_suite(epsilon)</h3>
+      <p>
+        calculer une valeur rapproché a epsilon prés grace a une suite(Bac 23)
+        <br />
+        #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
+      </p>
+      <div class="code">
+        <pre>
+def aprox_suite(epsilon):
+    U<sub>0</sub> = 3
+    U<sub>1</sub> = 0.5*U<sub>0</sub>
+    while not(abs(U<sub>1</sub> - U<sub>0</sub>) <= epsilon):
+        U<sub>0</sub> = U<sub>1</sub>
+        U<sub>1</sub> = 0.5*U<sub>0</sub>
+    return U<sub>1</sub>
+    </pre
+        >
+      </div>
+    </div>
+
+    <!-- Modal pour l'algorithme point_fixe -->
+    <div id="approx_suite" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('approx_suite')">&times;</span>
+        <h4>Version algorithmique (point_fixe)</h4>
+        <pre class="algo">
+fonction approx_suite(epsilon)
+Début
+    U<sub>0</sub> ← 3
+    U<sub>1</sub> ← 0.5 × U<sub>0</sub>
+    Tant que abs(U<sub>1</sub> - U<sub>0</sub>) > epsilon faire
+        U<sub>0</sub> ← U<sub>1</sub>
+        U<sub>1</sub> ← 0.5 × U<sub>0</sub>
+    Fin Tant que
+    Retourner U<sub>1</sub>
+Fin
+    </pre
+        >
+      </div>
+    </div>
     <!-- verif_reel -->
     <div class="card" ondblclick="openModal('verif_reel')">
       <h3>verif_reel(ch)</h3>
