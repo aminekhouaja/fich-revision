@@ -305,9 +305,9 @@ def tri_bulle(t, n):
     for i in range(n - 1):
         for j in range(n - 1 - i):
             if t[j] > t[j + 1]:
-              a = t[i]
-              t[i] = t[j]
-              t[j] = a</pre
+              a = t[j]
+              t[j] = t[j]
+              t[j+1] = a</pre
         >
       </div>
     </div>
@@ -321,9 +321,9 @@ Début
     Pour i de 0 à n - 2 faire
         Pour j de 0 à n - 2 - i faire
             Si t[j] > t[j + 1] alors
-              a ← t[i]
-              t[i] ← t[j]
-              t[j] ← a
+              a ← t[j]
+              t[j] ← t[j+1]
+              t[j+1] ← a
             FinSi
         FinPour
     FinPour
