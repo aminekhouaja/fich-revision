@@ -110,10 +110,10 @@ l=len(x)-1
 if x=="":
   return 0
 else:
-if x[l].isdecimal():
-  return b*conv2(x[:l],b)+int(x[l])
-else:
-  return b*conv2(x[:l],b)+(ord(x[l])-55)
+  if x[l].isdecimal():
+    return b*conv2(x[:l],b)+int(x[l])
+  else:
+    return b*conv2(x[:l],b)+(ord(x[l])-55)
         </pre>
       </div>
     `;
