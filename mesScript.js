@@ -105,28 +105,28 @@ function addNewCard() {
   if (sel == 1) {
     card.innerHTML = `
         <pre>
-def conv2(x,b):
-l=len(x)-1
-if x=="":
+def conv2(ch,b):
+l=len(ch)-1
+if ch=="":
   return 0
 else:
-  if x[l].isdecimal():
-    return b*conv2(x[:l],b)+int(x[l])
+  if ch[l].isdecimal():
+    return b*conv2(ch[:l],b)+int(ch[l])
   else:
-    return b*conv2(x[:l],b)+(ord(x[l])-55)
+    return b*conv2(ch[:l],b)+(ord(ch[l])-55)
         </pre>
       </div>
     `;
   } else {
     card.innerHTML = `
           <pre>
-def conv10(x, b):
+def conv10(ch, b):
 s = 0
-for i in range(len(x)):
-    if x[i].isdecimal():
-        s = b * s + int(x[i])
+for i in range(len(ch)):
+    if ch[i].isdecimal():
+        s = b * s + int(ch[i])
     else:
-        s = b * s + ord(x[i]) - 55
+        s = b * s + ord(ch[i]) - 55
 return s</pre
     >
   </div>
