@@ -310,9 +310,9 @@ def tri_bulle(t, n):
     for i in range(n - 1):
         for j in range(n - 1 - i):
             if t[j] > t[j + 1]:
-              a = t[i]
-              t[i] = t[j]
-              t[j] = a</pre
+              a = t[j]
+              t[j] = t[j]
+              t[j+1] = a</pre
         >
       </div>
     </div>
@@ -326,9 +326,9 @@ Début
     Pour i de 0 à n - 2 faire
         Pour j de 0 à n - 2 - i faire
             Si t[j] > t[j + 1] alors
-              a ← t[i]
-              t[i] ← t[j]
-              t[j] ← a
+              a ← t[j]
+              t[j] ← t[j+1]
+              t[j+1] ← a
             FinSi
         FinPour
     FinPour
@@ -351,8 +351,8 @@ def tri_selection(t, n):
                 min_index = j
         if min_index!=i :
           a = t[i]
-          t[i] = t[j]
-          t[j] = a</pre
+          t[i] = t[min_index]
+          t[min_index] = a</pre
         >
       </div>
     </div>
@@ -372,8 +372,8 @@ Début
         FinPour
         Si min_index!=i alors
           a ← t[i]
-          t[i] ← t[j]
-          t[j] ← a
+          t[i] ← t[min_index]
+          t[min_index] ← a
         FinSi
     FinPour
 Fin</pre
@@ -427,7 +427,7 @@ def tri_shell(t, n):
     p=1
     while p < n :
         p = p *3 + 1
-    while p=!= 0:
+    while p != 0:
         p = p // 3
         for i in range(p, n):
             v = t[i]
@@ -647,15 +647,15 @@ Fin</pre>
         <pre>
     <!-- -----fonction---- -->
 def Enregistrer(t,n):
-  f=open("cache.txt")
+  f=open("cache.txt",'a')
   for i in range(n):
       f.write(str(t[i]))
   f.close()
 
 def Enregistrer2(t,n):
-  f=open("cache.dat")
+  f=open("cache.dat",'ab')
   for i in range(n):
-      dunp(t[i],f)
+      dump(t[i],f)
   f.close()
           
 
@@ -672,7 +672,7 @@ def Enregistrer2(t,n):
 Procédure Enregistrer(T : tab, N : entier, @F : fich)
 
 Début
-    Ouvrir("cache.txt", F, "wb")
+    Ouvrir("cache.txt", F, "wb/w")
     Pour i de 0 à N - 1 Faire
         Ecrire_nl(F, T[i])
         #Ecrire(F,t[i]) ///pour les fichier type
