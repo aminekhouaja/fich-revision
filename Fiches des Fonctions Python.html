@@ -56,13 +56,13 @@
       <p>Convertit un nombre en base b vers la base 10.</p>
       <div class="code" id="joe1" ondblclick="verif()">
         <pre>
-def conv10(x, b):
+def conv10(ch, b):  
     s = 0
-    for i in range(len(x)):
-        if x[i].isdecimal():
-            s = b * s + int(x[i])
+    for i in range(len(ch)):
+        if ch[i].isdecimal():
+            s = b * s + int(ch[i])
         else:
-            s = b * s + ord(x[i]) - 55
+            s = b * s + ord(ch[i]) - 55
     return s</pre
         >
       </div>
