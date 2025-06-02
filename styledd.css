@@ -298,3 +298,28 @@ table tr:hover {
     background-color: lightseagreen;
   }
 }
+#nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 1px;
+  left: 1px;
+  width: 40px;
+  height: 45px;
+  border: #1a1a1a solid;
+  background: #eebbc3;
+  border-radius: 10px;
+  opacity: 0.3;
+  font-size: 10px;
+  padding: 1px;
+  color: #6a11cb;
+}
+#nav img {
+  width: 90%;
+  height: 90%;
+  margin: 1px;
+}
+#nav:hover {
+  opacity: 1;
+}
