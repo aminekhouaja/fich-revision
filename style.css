@@ -355,3 +355,10 @@ table tr:hover {
 #nav:hover {
   opacity: 1;
 }
+#anx {
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}

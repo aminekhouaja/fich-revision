@@ -259,6 +259,8 @@ table tr:hover {
   height: 10%;
   width: 70%;
   padding: 5px;
+  margin-left: 15%;
+  margin-right: 15%;
   display: flex;
   justify-content: center;
   align-items: center;
