@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -112,3 +113,8 @@
     <footer>&copy; 2025 Amine Khouaja – Portfolio personnel</footer>
   </body>
 </html>
+=======
+ma7bee bik fi 3alem ficheti 
+ab3thou el b3athkom el lien mta3 el github ama belehi me8er ser9a
+link: https://aminekhouaja.github.io/fich-revision/Fiches%20des%20Fonctions%20Python.html
+>>>>>>> 05b26cf060fd722b8ca4f9a18fb1b09302597a75
