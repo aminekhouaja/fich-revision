@@ -8,15 +8,19 @@ body {
   background: linear-gradient(to right, #a18cd1, #fbc2eb);
   color: #232946;
 }
-.card {
+.card[value="js"] {
   width: 700px;
   border: 1px solid #b8c1ec;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 2px 2px 10px rgba(35, 41, 70, 0.15);
-  background: #f4f6fb;
-  color: #232946;
+  background: rgb(49, 49, 49);
+  color: yellowgreen;
   cursor: pointer;
+  background-image: url(js.png);
+  background-size: 5%;
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 .card[value="php"] {
   width: 700px;
@@ -49,7 +53,7 @@ body {
 }
 .card h3 {
   margin-top: 0;
-  color: #6247aa;
+  color: yellow;
 }
 .code {
   background: #232946;
@@ -58,7 +62,7 @@ body {
   font-size: larger;
   font-family: monospace;
   white-space: pre;
-  color: #eebbc3;
+  color: yellow;
   overflow-x: auto;
   display: block;
 }
