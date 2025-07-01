@@ -1,3 +1,4 @@
+<!-- Corrections orthographiques appliquées -->
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -6,6 +7,7 @@
     <meta name="screen-orientation" content="landscape" />
     <title>Fiche des Fonctions Python</title>
     <link rel="stylesheet" href="styledd.css" />
+    <link rel="icon" type="image/png" href="3adel.png" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -37,13 +39,14 @@
           href="https://aminekhouaja.github.io/fich-revision/portfolio.html"
           id="prf"
           title="VOIR MON PORTFOLIO"
+          target="_blank"
           ><p>made by : med amine khouaja</p></a
         >
         <h4>❤ ركّز و ربي ينجّحك</h4>
       </div>
     </header>
     <div id="conseil">
-      conseil: faite un double click sur les codes pour visualiser leur
+      Conseil : faites un double-clic sur les codes pour visualiser leur
       algorithme
       <span class="close" onclick="closeModal('conseil')">&times;</span>
     </div>
@@ -52,13 +55,13 @@
       <h3>convB_10(x, b)</h3>
       <div id="meth_alg">
         <select id="methode" onchange="addNewCard()">
-          <option value="methode iteratif">methode iteratif</option>
-          <option value="methode recursive">methode recursive</option>
+          <option value="methode itérative">méthode itérative</option>
+          <option value="methode récursive">méthode récursive</option>
         </select>
         <!-- <button ondblclick="verif()">algorithme</button>-->
       </div>
 
-      <p>Convertit un nombre en base b vers la base 10.</p>
+      <p>Convertit un nombre de la base b vers la base 10.</p>
       <div class="code" id="joe1" ondblclick="verif()">
         <pre>
 def conv10(ch, b):  
@@ -159,7 +162,7 @@ Fin</pre
     <!-- CARD ar -->
     <div class="card" ondblclick="openModal('algo3')">
       <h3>arrangement A(n,p)</h3>
-      <p>Calculer le nombre d'arrangement A(n,p)</p>
+      <p>Calculer le nombre d'arrangements A(n,p)</p>
       <div class="code">
         <pre>
 def ar(n, p):
@@ -261,7 +264,7 @@ Fin</pre
       <h3>pgcd(a, b) / ppcm(a,b)</h3>
       <p>
         Calcule le plus grand commun diviseur (PGCD) de deux nombres et le plus
-        grand commun diviseur (PPCM) .
+        petit commun multiple (PPCM).
       </p>
       <div class="code">
         <pre>
@@ -316,7 +319,7 @@ def tri_bulle(t, n):
         for j in range(n - 1 - i):
             if t[j] > t[j + 1]:
               a = t[j]
-              t[j] = t[j]
+              t[j] = t[j+1]
               t[j+1] = a</pre
         >
       </div>
@@ -425,7 +428,7 @@ Fin</pre
     </div>
     <div class="card" ondblclick="openModal('algoTris')">
       <h3>tri_shell(t, n)</h3>
-      <p>Trie un tableau par la méthode du tri par shell.</p>
+      <p>Trie un tableau par la méthode du tri de Shell.</p>
       <div class="code">
         <pre>
 def tri_shell(t, n):
@@ -451,7 +454,7 @@ def tri_shell(t, n):
         <pre class="algo">
 Fonction tri_shell(t, n)
 Début
-  p ←* 1
+  p ← 1
   Tant que p < n faire
     p ← p * 3 + 1
   FinTantQue
@@ -476,17 +479,17 @@ Fin
       <h3>Air_rectangle(a,b,n)</h3>
       <div id="meth_alg">
         <select id="methode_rec" onchange="changeX()">
-          <option value="methode iteratif">methode millieu</option>
-          <option value="methode recursive">methode gauche</option>
-          <option value="methode jj">methode droite</option>
+          <option value="methode itérative">méthode milieu</option>
+          <option value="methode récursive">méthode gauche</option>
+          <option value="methode droite">méthode droite</option>
         </select>
         <!-- <button ondblclick="verif()">algorithme</button>-->
       </div>
 
-      <p>calculer l'aire d'une fonction grace a la methode du rectangle</p>
+      <p>Calculer l'aire d'une fonction grâce à la méthode du rectangle</p>
       <div class="code" id="joe2" ondblclick="openModal('algorect')">
         <pre>
-  def rectrangle_<i class="nomf" id="nomf"> millieu</i>(a,b,n):
+  def rectangle_<i class="nomf" id="nomf"> milieu</i>(a,b,n):
   pas=(b-a)/n
   <i id="progX">x=a+pas/2</i>
   s=0
@@ -519,18 +522,18 @@ Fin
     </div>
     <!-- TRI INSERTION -->
     <div class="card" ondblclick="openModal('algotrap')">
-      <h3>Air trapéze</h3>
-      <p>calculer l'aire d'une fonction grace a la methode du rectangle</p>
+      <h3>Air trapèze</h3>
+      <p>Calculer l'aire d'une fonction grâce à la méthode du trapèze</p>
       <div class="code">
         <pre>
-def Air_trapeze(t, n):
-pas=(b-a)/n
-x=a
-s=0
-for i in range (n):
-    s=s+(f(x)+f(x+pas))*pas/2
-    x+=pas
-return s
+def Air_trapeze(a, b, n):
+    pas=(b-a)/n
+    x=a
+    s=0
+    for i in range (n):
+        s=s+(f(x)+f(x+pas))*pas/2
+        x+=pas
+    return s
 </pre
         >
       </div>
@@ -539,7 +542,7 @@ return s
     <div id="algotrap" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('algotrap')">&times;</span>
-        <h4>Version algorithmique (Air trapéze)</h4>
+        <h4>Version algorithmique (Air trapèze)</h4>
         <pre class="algo">
 Fonction Air_trapeze(a, b, n)
 Début
@@ -559,7 +562,7 @@ Fin</pre
 
     <div class="card" ondblclick="openModal('trans_fich_tab')">
       <h3 class="titre">Transfert de fichier texte à tableau</h3>
-      <p>Transferer le contenu d'un fichier texte vers un tableau</p>
+      <p>Transférer le contenu d'un fichier texte vers un tableau</p>
       <div class="code">
         <!-- -----fonction---- -->
         <pre>
@@ -605,7 +608,7 @@ Fin
 
     <div class="card" ondblclick="openModal('tran_fT_tab')">
       <h3 class="titre">Transfert de fichier typé à tableau</h3>
-      <p>Transferer le contenu d'un fichier typé vers un tableau</p>
+      <p>Transférer le contenu d'un fichier typé vers un tableau</p>
       <div class="code">
         <pre>
     <!-- -----fonction---- -->
@@ -647,7 +650,7 @@ Fin</pre>
 
     <div class="card" ondblclick="openModal('trans_tab_f')">
       <h3 class="titre">Transfert de tableau à fichier</h3>
-      <p>Transferer le contenu d'un tableau vers fichier</p>
+      <p>Transférer le contenu d'un tableau vers un fichier</p>
       <div class="code">
         <pre>
     <!-- -----fonction---- -->
@@ -680,7 +683,7 @@ Début
     Ouvrir("cache.txt", F, "wb/w")
     Pour i de 0 à N - 1 Faire
         Ecrire_nl(F, T[i])
-        #Ecrire(F,t[i]) ///pour les fichier type
+        #Ecrire(F,t[i]) ///pour les fichiers typés
     FinPour
     Fermer(F)
 Fin
@@ -692,7 +695,7 @@ Fin
     <div class="card" ondblclick="openModal('algofun0')">
       <h3>point_zero(epsilon)</h3>
       <p>
-        Calcule le point zero d'une fonction avec une précision donnée. f(x)=0
+        Calcule le point zéro d'une fonction avec une précision donnée. f(x)=0
       </p>
       <div class="code">
         <pre>
@@ -712,7 +715,7 @@ def zero(a, b, epsilon):
     <div id="algofun0" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('algofun0')">&times;</span>
-        <h4>Version algorithmique (Air trapéze)</h4>
+        <h4>Version algorithmique (Air trapèze)</h4>
         <pre class="algo">
 Fonction zero(a,b,epsilon)
 Début
@@ -774,7 +777,7 @@ Fin
     <div class="card" ondblclick="openModal('suite')">
       <h3>suite(n)</h3>
       <p>
-        calculer le N <sub>ieme</sub> terme de la suite
+        Calculer le N<sup>ième</sup> terme de la suite
         <br />
         #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
       </p>
@@ -807,17 +810,17 @@ Fin
         >
       </div>
     </div>
-    <!-- Nouvelle carte pour aprox  suite -->
+    <!-- Nouvelle carte pour approx suite -->
     <div class="card" ondblclick="openModal('approx_suite')">
-      <h3>aprrox_suite(epsilon)</h3>
+      <h3>approx_suite(epsilon)</h3>
       <p>
-        calculer une valeur rapproché a epsilon prés grace a une suite(Bac 23)
+        Calculer une valeur approchée à epsilon près grâce à une suite (Bac 23)
         <br />
         #exemple : U<sub>n</sub>=0.5*U<sub>n-1</sub> et U<sub>0</sub>=3
       </p>
       <div class="code">
         <pre>
-def aprox_suite(epsilon):
+def approx_suite(epsilon):
     U<sub>0</sub> = 3
     U<sub>1</sub> = 0.5*U<sub>0</sub>
     while not(abs(U<sub>1</sub> - U<sub>0</sub>) <= epsilon):
@@ -829,11 +832,11 @@ def aprox_suite(epsilon):
       </div>
     </div>
 
-    <!-- Modal pour l'algorithme point_fixe -->
+    <!-- Modal pour l'algorithme approx_suite -->
     <div id="approx_suite" class="modal">
       <div class="modal-content">
         <span class="close" onclick="closeModal('approx_suite')">&times;</span>
-        <h4>Version algorithmique (point_fixe)</h4>
+        <h4>Version algorithmique (approx_suite)</h4>
         <pre class="algo">
 fonction approx_suite(epsilon)
 Début
@@ -853,7 +856,8 @@ Fin
     <div class="card" ondblclick="openModal('verif_reel')">
       <h3>verif_reel(ch)</h3>
       <p>
-        verifie si la chaine ch est un reel {methode utilisée que en pratique}.
+        Vérifie si la chaîne ch est un réel (méthode utilisée uniquement en
+        pratique).
       </p>
       <div class="code">
         <pre>
@@ -872,7 +876,7 @@ def verif_reel(ch):
         <h4>Version algorithmique (verif reel)</h4>
         <pre class="algo">
 fonction verif_reel(ch):
-    retourner ch.estNum Ou (souchaine(ch,0,pos(".",ch)).estNum et souchaine(ch,pos('.',ch)+1,long(ch)))
+    retourner ch.estNum Ou (sous_chaine(ch,0,pos(".",ch)).estNum et sous_chaine(ch,pos('.',ch)+1,long(ch)))
           </pre
         >
       </div>
@@ -932,7 +936,7 @@ app.exec_()
     <!-- Ajouter la table -->
     <div class="table-container">
       <p>
-        Vous pouvez appuyer sur les lignes avec un * pour voir plus de détails
+        Vous pouvez cliquer sur les lignes avec un * pour voir plus de détails
         😉
       </p>
 
@@ -952,7 +956,7 @@ app.exec_()
           </tr>
           <tr>
             <td>TextEdit</td>
-            <td>setText, Clear toPlainText</td>
+            <td>setText, clear, toPlainText</td>
             <td>
               Modifie le texte du champ par celui en argument. Efface le contenu
               du champ de texte.
@@ -960,12 +964,12 @@ app.exec_()
           </tr>
           <tr>
             <td>LineEdit</td>
-            <td>Text, setText, Clear</td>
+            <td>text, setText, clear</td>
             <td>Renvoie ou modifie le contenu du champ de texte.</td>
           </tr>
           <tr>
             <td>PushButton</td>
-            <td>Clicked, Connect</td>
+            <td>clicked, connect</td>
             <td>
               Déclenche une action ou un événement spécifique lorsqu’il est
               pressé (cliqué).
@@ -974,13 +978,13 @@ app.exec_()
           <tr>
             <td>ComboBox</td>
             <td>currentText</td>
-            <td>Retourne la chaîne de caractères actuellement sélectionnée.</td>
+            <td>Renvoie la chaîne de caractères actuellement sélectionnée.</td>
           </tr>
           <tr>
             <td>RadioButton</td>
             <td>isChecked</td>
             <td>
-              Renvoie Vrai si ce bouton spécifique est sélectionné, sinon elle
+              Renvoie Vrai si ce bouton spécifique est sélectionné, sinon il
               retourne Faux.
             </td>
           </tr>
@@ -988,22 +992,22 @@ app.exec_()
             <td>CheckBox</td>
             <td>isChecked</td>
             <td>
-              Renvoie Vrai si la case est cochée sinon elle retourne Faux.
+              Renvoie Vrai si la case est cochée, sinon elle retourne Faux.
             </td>
           </tr>
           <tr>
             <td>ListWidget</td>
-            <td>addItem, Clear</td>
+            <td>addItem, clear</td>
             <td>Ajoute un objet ou une chaîne à la liste. Vide la liste.</td>
           </tr>
           <tr onclick="openModal('TableWidget')" id="tabw">
             <td>TableWidget *</td>
-            <td>insertRow,setItem, QTableWidgetItem</td>
+            <td>insertRow, setItem, QTableWidgetItem</td>
             <td>Ajoute des données à une table, insère une ligne.</td>
           </tr>
           <tr>
             <td>QMessageBox</td>
-            <td>Critical</td>
+            <td>critical</td>
             <td>Affiche un message d’erreur.</td>
           </tr>
         </tbody>
