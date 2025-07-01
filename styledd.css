@@ -63,6 +63,12 @@ body {
   max-width: 600px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+#prf {
+  text-decoration: none;
+}
+#prf:hover {
+  text-decoration: underline;
+}
 .close {
   color: #aaa;
   float: right;

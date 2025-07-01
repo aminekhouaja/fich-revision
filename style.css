@@ -8,6 +8,12 @@ body {
   background: linear-gradient(to right, #a18cd1, #fbc2eb);
   color: #232946;
 }
+#prf {
+  text-decoration: none;
+}
+#prf:hover {
+  text-decoration: underline;
+}
 .card[value="js"] {
   width: 700px;
   border: 1px solid #b8c1ec;
