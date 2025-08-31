@@ -155,3 +155,22 @@ function verifmdp(ch) {
 function caractere(car) {
   return !(car.toUpperCase() < "A" || car.toUpperCase() > "Z");
 }
+function recherche() {
+  search = document.getElementById("searchInp").value;
+  cards = document.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+    cards[i].style.display = "block";
+  }
+  if (search == "") {
+    for (i = 0; i < cards.length; i++) {
+      cards[i].style.display = "block";
+    }
+  } else {
+    for (i = 0; i < cards.length; i++) {
+      text = cards[i].textContent.toLowerCase();
+      if (text.indexOf(search.toLowerCase()) == -1) {
+        cards[i].style.display = "none";
+      }
+    }
+  }
+}

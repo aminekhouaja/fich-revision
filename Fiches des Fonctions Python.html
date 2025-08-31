@@ -45,6 +45,21 @@
         <h4>❤ ركّز و ربي ينجّحك</h4>
       </div>
     </header>
+    <div name="search" id="search">
+      <input
+        list="miaw"
+        id="searchInp"
+        onchange="recherche()"
+        placeholder="search..."
+      />
+      <datalist id="miaw">
+        <option value="Trie">Trie</option>
+        <option value="Convertir">Convertir</option>
+        <option value="PGCD/PPCM">PGCD/PPCM</option>
+        <option value="Air">Air</option>
+        <option value="Transfert">Transfert</option>
+      </datalist>
+    </div>
     <div id="conseil">
       Conseil : faites un double-clic sur les codes pour visualiser leur
       algorithme
@@ -61,7 +76,7 @@
         <!-- <button ondblclick="verif()">algorithme</button>-->
       </div>
 
-      <p>Convertit un nombre de la base b vers la base 10.</p>
+      <p>Convertir un nombre de la base b vers la base 10.</p>
       <div class="code" id="joe1" ondblclick="verif()">
         <pre>
 def conv10(ch, b):  
@@ -122,7 +137,7 @@ Fin
     <!-- CARD conv -->
     <div class="card" ondblclick="openModal('algo2')">
       <h3>conv10_B(n, b)</h3>
-      <p>Convertit un nombre décimal en base b.</p>
+      <p>Convertir un nombre décimal en base b.</p>
       <div class="code">
         <pre>
 def conv(n, b):
